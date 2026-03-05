@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Мастер по металлу. Изготовление водосточных труб, вытяжек, рештаков и других изделий из жести на заказ.">
+    <title>Жестянщик | Изделия из металла на заказ</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">🗜️</span>
+                <span class="logo-text">Жестянщик<span class="highlight">ПРО</span></span>
+            </div>
+            <nav class="nav-links">
+                <a href="#services">Услуги</a>
+                <a href="#comparison">Результат</a>
+                <a href="#gallery">Примеры работ</a>
+                <a href="#calculator">Калькулятор</a>
+            </nav>
+            <a href="tel:+79991234567" class="nav-phone">+7 (999) 123-45-67</a>
+
+            <button class="mobile-menu-btn" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav">
+        <nav class="mobile-nav-links">
+            <a href="#services">Услуги</a>
+            <a href="#comparison">Результат</a>
+            <a href="#gallery">Примеры работ</a>
+            <a href="#calculator">Калькулятор</a>
+            <a href="tel:+79991234567" class="mobile-phone">+7 (999) 123-45-67</a>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <!-- Canvas for animated sparks -->
+        <canvas id="sparksCanvas"></canvas>
+        <div class="hero-content container">
+            <h1>ИЗДЕЛИЯ ИЗ МЕТАЛЛА<br><span class="highlight">НА ЗАКАЗ</span></h1>
+            <p>Надежность, точность и индустриальное качество от профессионального мастера-жестянщика.</p>
+            <div class="hero-buttons">
+                <a href="#calculator" class="btn btn-primary">Рассчитать стоимость</a>
+                <a href="#gallery" class="btn btn-outline">Смотреть работы</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services section" id="services">
+        <div class="container">
+            <h2 class="section-title">НАШИ <span class="highlight">УСЛУГИ</span></h2>
+            <div class="services-grid">
+
+                <div class="service-card" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare
+                    data-tilt-max-glare="0.3">
+                    <div class="service-icon">🌧️</div>
+                    <h3>Водосточные системы</h3>
+                    <p>Проектирование, изготовление и монтаж надежных водосточных труб и желобов любой сложности.</p>
+                </div>
+
+                <div class="service-card" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare
+                    data-tilt-max-glare="0.3">
+                    <div class="service-icon">💨</div>
+                    <h3>Вытяжки и Вентиляция</h3>
+                    <p>Промышленные и бытовые вытяжки, зонты вентиляционные из оцинкованной и нержавеющей стали.</p>
+                </div>
+
+                <div class="service-card" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare
+                    data-tilt-max-glare="0.3">
+                    <div class="service-icon">🏗️</div>
+                    <h3>Рештаки и Лотки</h3>
+                    <p>Изготовление прочных лотков (рештаков) для отвода воды и нестандартных металлических коробов.</p>
+                </div>
+
+                <div class="service-card" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare
+                    data-tilt-max-glare="0.3">
+                    <div class="service-icon">⚙️</div>
+                    <h3>Нестандартные изделия</h3>
+                    <p>Воплощаем в металле любые ваши чертежи: отливы, парапеты, колпаки на заборы и дымоходы.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before / After Slider Section -->
+    <section class="before-after section" id="comparison">
+        <div class="container">
+            <h2 class="section-title">РЕЗУЛЬТАТ <span class="highlight">РАБОТЫ</span></h2>
+            <p class="section-subtitle">Потяните ползунок, чтобы увидеть разницу до и после установки водосточной
+                системы</p>
+
+            <div class="slider-container">
+                <div class="slider-image slider-image-before">
+                    <img src="assets/before_roof.png" alt="До: Старая крыша без водостока">
+                    <div class="slider-label label-before">ДО</div>
+                </div>
+
+                <div class="slider-image slider-image-after">
+                    <img src="assets/after_roof.png" alt="После: Новая водосточная система">
+                    <div class="slider-label label-after">ПОСЛЕ</div>
+                </div>
+
+                <div class="slider-resizer">
+                    <div class="slider-handle">
+                        <span class="arrow left">◀</span>
+                        <span class="line"></span>
+                        <span class="arrow right">▶</span>
+                    </div>
+                </div>
+
+                <input type="range" min="0" max="100" value="50" class="slider-input" aria-label="Ползунок сравнения">
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section (3D Tilt) -->
+    <section class="gallery section" id="gallery">
+        <div class="container">
+            <h2 class="section-title">ПРИМЕРЫ <span class="highlight">РАБОТ</span></h2>
+            <p class="section-subtitle">Наведите курсор на карточку для 3D-эффекта</p>
+
+            <div class="gallery-grid">
+
+                <div class="gallery-card" data-tilt data-tilt-perspective="1000" data-tilt-scale="1.05">
+                    <img src="assets/gallery_downpipe.png" alt="Водосточная труба" class="gallery-img">
+                    <div class="gallery-info">
+                        <h3>Комплект водостока D-120</h3>
+                        <p>Оцинкованная сталь 0.5мм, порошковая покраска.</p>
+                        <div class="gallery-price">от 850 ₽ / пог. м</div>
+                    </div>
+                </div>
+
+                <div class="gallery-card" data-tilt data-tilt-perspective="1000" data-tilt-scale="1.05">
+                    <img src="assets/gallery_exhaust.png" alt="Вытяжной зонт" class="gallery-img">
+                    <div class="gallery-info">
+                        <h3>Вытяжной зонт островной</h3>
+                        <p>Нержавеющая сталь AISI 430, жироуловители.</p>
+                        <div class="gallery-price">от 12 000 ₽ / шт</div>
+                    </div>
+                </div>
+
+                <div class="gallery-card" data-tilt data-tilt-perspective="1000" data-tilt-scale="1.05">
+                    <img src="assets/gallery_trench.png" alt="Рештак / Лоток" class="gallery-img">
+                    <div class="gallery-info">
+                        <h3>Промышленный рештак</h3>
+                        <p>Толщина металла 1.2мм, усиленный каркас.</p>
+                        <div class="gallery-price">от 1 500 ₽ / шт</div>
+                    </div>
+                </div>
+
+                <div class="gallery-card" data-tilt data-tilt-perspective="1000" data-tilt-scale="1.05">
+                    <img src="assets/gallery_cap.png" alt="Колпак на трубу" class="gallery-img">
+                    <div class="gallery-info">
+                        <h3>Колпак (Дымник) жалюзийный</h3>
+                        <p>Полимерное покрытие, защита трубы от осадков.</p>
+                        <div class="gallery-price">от 4 500 ₽ / шт</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="calculator section" id="calculator">
+        <div class="container">
+            <h2 class="section-title">РАСЧЕТ <span class="highlight">СТОИМОСТИ</span></h2>
+
+            <div class="calc-wrapper">
+                <div class="calc-form">
+                    <div class="form-group">
+                        <label for="product-type">Тип изделия:</label>
+                        <select id="product-type">
+                            <option value="pipe">Водосточная труба</option>
+                            <option value="hood">Вытяжной зонт</option>
+                            <option value="gutter">Рештак (Лоток)</option>
+                            <option value="cap">Колпак на столб/трубу</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="material-type">Материал:</label>
+                        <select id="material-type">
+                            <option value="galvanized">Оцинкованная сталь (стандарт)</option>
+                            <option value="poly">Сталь с полимерным покрытием (цветная)</option>
+                            <option value="stainless">Нержавеющая сталь</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group row-group">
+                        <div class="input-col">
+                            <label for="size-length">Длина (м) / Кол-во:</label>
+                            <input type="number" id="size-length" min="1" value="1">
+                        </div>
+                    </div>
+
+                    <button id="calc-btn" class="btn btn-primary w-100">Рассчитать примерную стоимость</button>
+                </div>
+
+                <div class="calc-result">
+                    <h3>Примерный расчет:</h3>
+                    <div class="result-display">
+                        <span id="final-price">0</span> ₽
+                    </div>
+                    <p class="disclaimer">* Расчет является ориентировочным. Точная стоимость зависит от сложности
+                        чертежа и текущих цен на металл. Для точного расчета свяжитесь со мной.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <footer class="contact section" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="contact-info">
+                    <h2>СВЯЖИТЕСЬ <span class="highlight">СО МНОЙ</span></h2>
+                    <p>Готов обсудить ваш проект в любое время.</p>
+
+                    <div class="contact-methods">
+                        <a href="tel:+79991234567" class="phone-link">
+                            <span class="icon">📞</span> +7 (999) 123-45-67
+                        </a>
+                        <div class="messengers">
+                            <a href="#" class="messenger-btn whatsapp">WhatsApp</a>
+                            <a href="#" class="messenger-btn telegram">Telegram</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-logo">
+                    <span class="logo-icon">🗜️</span>
+                    <h3>Жестянщик<span class="highlight">ПРО</span></h3>
+                    <p>Профессиональная работа с металлом с 2010 года.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 ЖестянщикПРО. Все права защищены.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Vanilla Tilt JS (CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+
+    <!-- Custom Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
